@@ -16,7 +16,7 @@ RUN apt-get update && \
 
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
-# 1. Bake in browsers & deps.
+# Bake in browsers & deps.
 #    Browsers will be downloaded in `/ms-playwright`.
 #    Note: make sure to set 777 to the registry so that any user can access
 #    registry.
