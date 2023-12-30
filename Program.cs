@@ -1,7 +1,11 @@
-﻿using Microsoft.Playwright;
+var builder = WebApplication.CreateBuilder(args);
 
-using var playwright = await Playwright.CreateAsync();
-await using var browser = await playwright.Chromium.LaunchAsync();
-var page = await browser.NewPageAsync();
-await page.GotoAsync("https://www.comm100.com");
-await page.PdfAsync(new PagePdfOptions { Path = "page.pdf" });
+// Add services to the container.
+
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+app.MapControllers();
+
+app.Run();
