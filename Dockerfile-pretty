@@ -6,7 +6,7 @@ RUN mkdir /ms-playwright-demo && \
     cd /ms-playwright-demo && \
     dotnet new console && \
     dotnet add package Microsoft.Playwright -v 1.40.0 && \
-    dotnet publish . -c Releas -o /release
+    dotnet publish . -c Release -o /release
 
 # base image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
